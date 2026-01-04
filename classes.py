@@ -27,24 +27,24 @@
 # print(config2.api_key, config2.model, config2.max_tokens, config2.base_url)
 
 
-#-----------------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------------
 ##Adding behaviours or member methods in a class
 # class DataValidator:
 #     def __init__(self):
 #         self.errors = []
-    
+
 #     def validate_email(self, email):
 #         if "@" not in email:
 #             self.errors.append(f"Invalid email: {email}")
 #             return False
 #         return True
-    
+
 #     def validate_age(self, age):
 #         if age < 0 or age > 150:
 #             self.errors.append(f"Invalid age: {age}")
 #             return False
 #         return True
-    
+
 #     def get_errors(self):
 #         return self.errors
 
@@ -65,17 +65,17 @@
 # print(validator.get_errors())
 # # ['Invalid email: bad-email', 'Invalid age: 200', 'Invalid email: another-bad-email']
 
-#----------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------
 
 ## Inheritence
 # Parent class - general animal
 # class Animal:
 #     def __init__(self, name):
 #         self.name = name
-    
+
 #     def eat(self):
 #         return f"{self.name} is eating"
-    
+
 #     def sleep(self):
 #         return f"{self.name} is sleeping"
 
@@ -98,20 +98,43 @@
 # print(my_dog2.eat())
 # print(Dog(name="Aman").eat(),Dog(name="Aman").bark())
 
-#---------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------
 
-class TextProcessor:
-    def __init__(self,text):
-        self.text=text
-    
-    def clean_text(self):
-        self.text=self.text.strip().lower()
-        return self.text
-    
-    def remove_punctuations(self):
-        self.text=self.text.replace(".","").replace(",","")
-        return self.text
-    
-text=TextProcessor(text="  Hello!.Ankit.  ")
-print(text.clean_text())
-print(text.remove_punctuations())
+
+# class TextProcessor:
+#     def __init__(self, text):
+#         self.text = text
+
+#     def clean_text(self):
+#         self.text = self.text.strip().lower()
+#         return self.text
+
+#     def remove_punctuations(self):
+#         self.text = self.text.replace(".", "").replace(",", "")
+#         return self.text
+
+
+# text = TextProcessor(text="  Hello!.Ankit.  ")
+# print(text.clean_text())
+# print(text.remove_punctuations())
+
+
+class calculate:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def add(self):
+        return self.x + self.y
+
+    def sub(self):
+        return self.x - self.y
+
+    def mul(self):
+        return self.x * self.y
+
+
+calculator = calculate(2, 5)
+print(calculate.add())
+print(calculate.sub())
+print(calculate.mul())
