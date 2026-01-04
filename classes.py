@@ -134,7 +134,11 @@ class calculate:
         return self.x * self.y
 
 
-calculator = calculate(2, 5)
-print(calculate.add())
-print(calculate.sub())
-print(calculate.mul())
+x = int(input("Enter 1st integer: "))
+y = int(input("Enter 2nd integer: "))
+
+calculator = calculate(x, y)
+
+print(calculator.add())
+print(calculator.sub())
+print(calculator.mul())
